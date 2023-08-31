@@ -23,11 +23,11 @@ public class Encurtador {
 
             // Pegue os primeiros 5 caracteres do hash truncado
             String trucatedHash = hashHex.substring(0, 5);
-
+            String trucatedHashString = trucatedHash.toString();
             System.out.println("String original: " + input);
             System.out.println("Truncated Hash: " + trucatedHash);
 
-            return trucatedHash.toString();
+            return trucatedHashString;
 
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
