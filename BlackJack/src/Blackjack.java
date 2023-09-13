@@ -39,8 +39,8 @@ public class Blackjack {
         }
     }
 
-    public String largeHand(isBlackjack(card1, card2), int dealerScore) {
-        if(isBlackjack(card1, card2) == isBlackjack("ace", "ace")){
+    public String largeHand(, int dealerScore) {
+        if(isBlackjack == isBlackjack("ace", "ace")){
             return "P";
         } else if(isBlackjack == true && (dealerScore != 11 || dealerScore != 10)){
             return "W";
