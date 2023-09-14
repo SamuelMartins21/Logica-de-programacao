@@ -3,28 +3,42 @@ public class Blackjack {
     public int parseCard(String card) {
         int resultado;
         String cardMin = card.toLowerCase();
-        if(cardMin.equals("ace")){
-            resultado = 11;
-        } else if (cardMin.equals("two")){
-            resultado = 2;
-        } else if (cardMin.equals("three")){
-            resultado = 3;
-        } else if (cardMin.equals("four")){
-            resultado = 4;
-        } else if (cardMin.equals("five")){
-            resultado = 5;
-        } else if (cardMin.equals("six")){
-            resultado = 6;
-        } else if (cardMin.equals("seven")){
-            resultado = 7;
-        } else if (cardMin.equals("eight")){
-            resultado = 8;
-        } else if (cardMin.equals("nine")){
-            resultado = 9;
-        } else if (cardMin.equals("ten") || cardMin.equals("queen") || cardMin.equals("king") || cardMin.equals("jack") ){
-            resultado = 10;
-        } else {
-            resultado = 0;
+        switch (cardMin) {
+            case "ace":
+                resultado = 11;
+                break;
+            case "two":
+                resultado = 2;
+                break;
+            case "three":
+                resultado = 3;
+                break;
+            case "four":
+                resultado = 4;
+                break;
+            case "five":
+                resultado = 5;
+                break;
+            case "six":
+                resultado = 6;
+                break;
+            case "seven":
+                resultado = 7;
+                break;
+            case "eight":
+                resultado = 8;
+                break;
+            case "nine":
+                resultado = 9;
+                break;
+            case "ten":
+            case "queen":
+            case "king":
+            case "jack":
+                resultado = 10;
+                break;
+            default:
+                resultado = 0;
         }
         return resultado;
     }
@@ -32,17 +46,13 @@ public class Blackjack {
     public boolean isBlackjack(String card1, String card2) {
         int cardInt1 = parseCard(card1);
         int cardInt2 = parseCard(card2);
-        if(cardInt1 + cardInt2 == 21){
-            return true;
-        } else{
-            return false;
-        }
+        return (cardInt1 + cardInt2 == 21);
     }
 
-    public String largeHand(, int dealerScore) {
-        if(isBlackjack == isBlackjack("ace", "ace")){
+    public String largeHand( boolean isBlackjack , int dealerScore) {
+        if(isBlackjack == false){
             return "P";
-        } else if(isBlackjack == true && (dealerScore != 11 || dealerScore != 10)){
+        } else if(isBlackjack == true && (dealerScore != 11 && dealerScore != 10)){
             return "W";
         } else {
             return "S";
