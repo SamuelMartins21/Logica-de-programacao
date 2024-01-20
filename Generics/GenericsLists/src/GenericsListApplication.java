@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class GenericsListApplication {
     public static void main(String[] args) throws Exception {
-        LanguageList lista = new LanguageList();
+        LanguageList lista = new LanguageList(new ArrayList<>());
         System.out.println(lista.isEmpty());
         lista.addLanguage("samuel");
         System.out.println(lista.isEmpty());

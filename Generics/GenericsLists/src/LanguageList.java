@@ -1,8 +1,11 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class LanguageList {
-    private final List<String> languages = new ArrayList<>();
+    private final List<String> languages;
+
+    public LanguageList(List<String> languageList){
+        this.languages = languageList;
+    }
 
     public boolean isEmpty() {
         if (languages.isEmpty() == true) {
